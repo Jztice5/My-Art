@@ -1,23 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hkw
-  Date: 2018/11/6
-  Time: 17:39
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<% String path = request.getContextPath(); %>
 <html>
 <head>
     <title>后台登录</title>
-    <link rel="stylesheet" href="/css/pg_btn.css">
-    <script type="text/javascript" src="./js/jquery-1.3.2.min.js"></script>
-    <script src="lib/layui/layui.js"></script>
-    <script type="text/javascript" src="./js/xadmin.js"></script>
+    <link rel="stylesheet" href="<%=path%>/css/pg_btn.css">
+    <script type="text/javascript" src="<%=path%>/js/jquery-1.3.2.min.js"></script>
+    <script src="<%=path%>/lib/layui/layui.js"></script>
+    <script type="text/javascript" src="<%=path%>/js/xadmin.js"></script>
 </head>
 <body>
    <div class="page-bar" id="pg_div">
-       <ul class="page-num-ul">
+       <ul class="page-num-ul" style="width: 350px;text-align: right;">
            <li class="pg-li">共${param.totalCount}条记录&nbsp;&nbsp;${param.currentPageNo}/${param.totalPageCount}页
            <c:if test="${param.currentPageNo>1}">
                 <a class="pg_a" href="javascript:page_nav(document.forms[0],1);">首页</a>

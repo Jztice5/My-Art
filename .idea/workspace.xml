@@ -2,20 +2,592 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="dormitorySystem:war exploded" />
+      <artifact name="epidemic:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/controller/ClassController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/controller/DormCleanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/controller/DormRepairController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/controller/DormitoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/controller/StudentCleanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/controller/VisitorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/AdminDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/AdminDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/BookDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/ClassDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/ClassDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/DormCleanDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/DormCleanDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/DormRepairDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/DormRepairDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/DormitoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/DormitoryDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/StudentCleanDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/StudentCleanDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/StudentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/StudentDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/VisitorDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/dao/VisitorDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/interceptor/Loginlnterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/po/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/po/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/po/Class.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/po/DormClean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/po/DormRepair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/po/Dormitory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/po/PageInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/po/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/po/StudentClean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/po/Visitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/ClassService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/DormCleanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/DormRepairService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/DormitoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/StudentCleanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/VisitorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/impl/ClassServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/impl/DormCleanServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/impl/DormRepairServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/impl/DormitoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/impl/StudentCleanServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/service/impl/VisitorServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/util/MD5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ssm/mty/util/PropertiesUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/BookEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/BookList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/dormitorySystem_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/dormitorySystem_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dormitory.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dormitorySystem.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/resource.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/springmvc-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/jsp/homepage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/jsp/student_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/jsp/wwwa.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/ant-1.9.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/ant-launcher-1.9.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/asm-5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/aspectjweaver-1.8.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/cglib-3.2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-dbcp2-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-fileupload-1.3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-io-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-lang3-3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-pool2-2.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/jackson-annotations-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/jackson-core-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/jackson-databind-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/javassist-3.21.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/log4j-api-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/log4j-core-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/mybatis-3.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/mybatis-spring-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.40-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/ognl-3.1.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/slf4j-api-1.7.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/slf4j-log4j12-1.7.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-aop-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-aspects-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-beans-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-context-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-core-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-expression-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-jdbc-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-tx-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-web-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-webmvc-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/css/font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/css/xadmin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/fonts/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/fonts/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/fonts/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/fonts/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/js/xadmin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/js/xcity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/META-INF/dormitorySystem.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/AdminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/ClassController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/DormitoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/AdminDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/AdminDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/ClassDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/ClassDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormCleanDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormRepairDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormitoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormitoryDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/StudentCleanDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/StudentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/StudentDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/VisitorDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/interceptor/Loginlnterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Class.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Dormitory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/PageInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/service/AdminService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/service/ClassService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/service/DormitoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/service/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/service/impl/AdminServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/service/impl/ClassServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/service/impl/DormitoryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/service/impl/StudentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/springmvc-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_Studentlist.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/homepage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/pageBtn.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/visitor_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/ant-1.9.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/ant-launcher-1.9.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/asm-5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/aspectjweaver-1.8.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/cglib-3.2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/commons-dbcp2-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/commons-fileupload-1.3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/commons-io-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/commons-lang3-3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/commons-pool2-2.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/jackson-annotations-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/jackson-core-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/jackson-databind-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/javassist-3.21.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/log4j-api-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/log4j-core-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/mybatis-3.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/mybatis-spring-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.40-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/ognl-3.1.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/slf4j-api-1.7.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/slf4j-log4j12-1.7.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/spring-aop-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/spring-aspects-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/spring-beans-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/spring-context-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/spring-core-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/spring-expression-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/spring-jdbc-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/spring-tx-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/spring-web-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/spring-webmvc-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/springmvc-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/login-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/pg_btn.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/usersLogin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/xadmin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/fonts/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/fonts/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/fonts/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/fonts/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/images/01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/images/J1.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/images/J2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/images/bti.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/images/timg-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/excel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/jquery-1.11.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/jquery-1.3.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/layfilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/xadmin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/xcity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/layui_exts/excel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/colorpicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/rate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/resource.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/springmvc-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/META-INF/dormitorySystem.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/AdminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/ClassController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/DormitoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/AdminDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/AdminDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/ClassDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/ClassDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormCleanDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormRepairDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormitoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormitoryDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/StudentCleanDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/StudentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/StudentDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/VisitorDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/interceptor/Loginlnterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Class.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Dormitory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/PageInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/service/AdminService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/service/ClassService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/service/DormitoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/service/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/service/impl/AdminServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/service/impl/ClassServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/service/impl/DormitoryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/service/impl/StudentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/springmvc-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/ClassController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/DormCleanController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/DormRepairController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/DormitoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/StudentCleanController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/VisitorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/AdminDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/AdminDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/ClassDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/ClassDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormCleanDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormCleanDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormRepairDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormRepairDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/StudentCleanDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/StudentCleanDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/StudentDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/StudentDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/VisitorDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/VisitorDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/interceptor/Loginlnterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Class.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/DormClean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/DormRepair.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Dormitory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/PageInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/StudentClean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Visitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/AdminService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/ClassService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/DormCleanService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/DormRepairService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/DormitoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/StudentCleanService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/VisitorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/impl/AdminServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/impl/ClassServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/impl/DormCleanServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/impl/DormRepairServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/impl/DormitoryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/impl/StudentCleanServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/impl/StudentServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/service/impl/VisitorServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/util/MD5Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/util/PropertiesUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/springmvc-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/springmvc-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/class_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/class_Studentlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/class_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/class_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/pageBtn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/pageBtn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/visitor_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/visitor_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/pg_btn.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/pg_btn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="271" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -41,22 +613,6 @@
     </expand>
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="187">
-                <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -64,90 +620,31 @@
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="custom" />
+        <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>sreach</find>
-      <find>form</find>
-      <find>updateEdit</find>
-      <find>export</find>
-      <find>expo</find>
-      <find>exp</find>
-      <find>use</find>
-      <find>&amp;#xe67c;</find>
-      <find>search</find>
-      <find>s_classid</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>search</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/com/itheima/service/DormRepairService.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/service/impl/DormRepairServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/dao/DormRepairDao.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/dao/DormRepairDao.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/visitor_edit.jsp" />
-        <option value="$PROJECT_DIR$/src/com/itheima/po/Visitor.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/service/VisitorService.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/dao/VisitorDao.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/dao/VisitorDao.xml" />
-        <option value="$PROJECT_DIR$/src/com/itheima/service/impl/VisitorServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_edit.jsp" />
-        <option value="$PROJECT_DIR$/src/com/itheima/service/DormitoryService.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/visitor_list.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" />
-        <option value="$PROJECT_DIR$/src/com/itheima/po/Student.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/service/StudentCleanService.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/service/impl/StudentCleanServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/service/impl/StudentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/service/StudentService.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/dao/StudentDao.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/student_edit.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" />
-        <option value="$PROJECT_DIR$/src/com/itheima/dao/StudentDao.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/class_edit.jsp" />
-        <option value="$PROJECT_DIR$/src/com/itheima/service/impl/DormitoryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp" />
-        <option value="$PROJECT_DIR$/src/com/itheima/service/ClassService.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/service/impl/ClassServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/dao/ClassDao.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/class_list.jsp" />
-        <option value="$PROJECT_DIR$/src/com/itheima/dao/ClassDao.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/class_Studentlist.jsp" />
-        <option value="$PROJECT_DIR$/src/com/itheima/po/Class.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/po/Dormitory.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" />
-        <option value="$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.xml" />
-        <option value="$PROJECT_DIR$/src/com/itheima/controller/ClassController.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/controller/DormitoryController.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/controller/DormRepairController.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/controller/DormCleanController.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/controller/StudentController.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/controller/VisitorController.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/dormitory.sql" />
-        <option value="$PROJECT_DIR$/README.md" />
-      </list>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/com/ssm/mty/dao/TinputDao.xml" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Administrator\Desktop\1\DormitoryManager\.idea" />
+      </set>
     </option>
   </component>
   <component name="LogFilters">
@@ -157,93 +654,61 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="1378" />
-    <option name="height" value="725" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/app2/apache-maven-3.5.3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="dormitorySystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dormitorySystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dormitorySystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dormitorySystem" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dormitorySystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectId" id="1WmgUmuz1nw8gUsGod2C5wBnaHg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/hkw/Desktop/dormitorySystem/src/springmvc-config.xml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562417972561" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Student_dorm_System" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IDEA-File\dormitorySystem" />
-      <recent name="E:\IDEA-File\dormitorySystem\web\js" />
-      <recent name="E:\IDEA-File\dormitorySystem\web\lib\layui" />
-      <recent name="E:\IDEA-File\dormitorySystem\web\images" />
-      <recent name="E:\IDEA-File\dormitorySystem\web\WEB-INF" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.itheima.util" />
-      <recent name="com.itheima.service.impl" />
-      <recent name="com.itheima.service" />
-      <recent name="com.itheima.dao" />
-      <recent name="com.itheima.controller" />
+      <recent name="E:\毕设\epidemic\web\images" />
+      <recent name="C:\Users\Administrator\Desktop\疫情\源码\idea\repair\web\images" />
+      <recent name="C:\Users\Administrator\Desktop\疫情\repair\web\WEB-INF\jsp" />
+      <recent name="C:\Users\Administrator\Desktop\疫情\repair\web\login" />
+      <recent name="C:\Users\Administrator\Desktop\疫情\repair\web\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\IDEA-File\dormitorySystem\web\layui_exts" />
       <recent name="E:\IDEA-File\dormitorySystem\web\WEB-INF\jsp" />
       <recent name="E:\IDEA-File\dormitorySystem\web\images" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ssm.mty.po" />
+      <recent name="com.ssm.mty.controller" />
+      <recent name="com.itheima.util" />
+      <recent name="com.itheima.service.impl" />
+      <recent name="com.itheima.service" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet">
@@ -266,6 +731,7 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -273,19 +739,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dormitorySystem" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.37" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
+    <configuration name="Tomcat 8.0" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.60" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="dormitorySystem:war exploded">
+        <artifact name="epidemic:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_dormitorySystem_2" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_repair" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -293,7 +757,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54670" />
+        <option name="DEBUG_PORT" value="62612" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -311,6 +775,21 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
@@ -343,7 +822,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="dormitorySystem:war exploded" />
+          <artifact name="epidemic:war exploded" />
         </option>
       </method>
     </configuration>
@@ -356,6 +835,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.15097402" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -426,313 +932,70 @@
       <workItem from="1559658602138" duration="3925000" />
       <workItem from="1560590403321" duration="3685000" />
       <workItem from="1562410239127" duration="6992000" />
+      <workItem from="1570625086119" duration="119000" />
+      <workItem from="1570625870553" duration="1242000" />
+      <workItem from="1570633876136" duration="9000" />
+      <workItem from="1579760216152" duration="2918000" />
+      <workItem from="1580470052998" duration="19841000" />
+      <workItem from="1580533163411" duration="246000" />
+      <workItem from="1580533594868" duration="163000" />
+      <workItem from="1580533779584" duration="49518000" />
+      <workItem from="1580621964797" duration="4981000" />
+      <workItem from="1580642829166" duration="270000" />
+      <workItem from="1581345480982" duration="1109000" />
+      <workItem from="1581440052855" duration="1859000" />
+      <workItem from="1582175939136" duration="94000" />
+      <workItem from="1582178532085" duration="631000" />
+      <workItem from="1585923906166" duration="61000" />
+      <workItem from="1585923968589" duration="736000" />
+      <workItem from="1585926360605" duration="44821000" />
+      <workItem from="1586126026066" duration="221000" />
+      <workItem from="1586162153734" duration="2301000" />
+      <workItem from="1586571068772" duration="9000" />
+      <workItem from="1601873497379" duration="176000" />
+      <workItem from="1601873720639" duration="11337000" />
+      <workItem from="1601942515190" duration="21882000" />
+      <workItem from="1601998095147" duration="27830000" />
+      <workItem from="1603368129315" duration="12009000" />
+      <workItem from="1603451820865" duration="1539000" />
+      <workItem from="1603454056530" duration="198000" />
+      <workItem from="1603454574587" duration="1517000" />
+      <workItem from="1603510411639" duration="17000" />
+      <workItem from="1603510470757" duration="131000" />
+      <workItem from="1603511645767" duration="3300000" />
+      <workItem from="1603516826871" duration="197000" />
+      <workItem from="1620379985902" duration="284000" />
+      <workItem from="1651910902808" duration="4641000" />
+      <workItem from="1651922886250" duration="2151000" />
+      <workItem from="1652191488539" duration="603000" />
+      <workItem from="1652354717851" duration="1528000" />
+      <workItem from="1652359646452" duration="2438000" />
+      <workItem from="1652508610172" duration="920000" />
+      <workItem from="1652511069653" duration="2635000" />
+      <workItem from="1652535339774" duration="12000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="592178000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2526475" />
-      <window_info id="Structure" order="1" weight="0.24962178" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3288364" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48411497" weight="0.24153847" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3992298" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.121416524" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3276923" />
-      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.09331919" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.515885" side_tool="true" weight="0.25081968" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.29016393" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="16" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Console" order="17" weight="0.3295082" />
-      <window_info anchor="bottom" id="Statistic" order="18" weight="0.25076923" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.16490166" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Maven" order="9" weight="0.32980332" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/dao/DormCleanDao.xml" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/dao/VisitorDao.xml" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/service/VisitorService.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/dao/VisitorDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/service/impl/VisitorServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/visitor_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="207" column="36" selection-start-line="207" selection-start-column="36" selection-end-line="207" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/service/StudentCleanService.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/service/impl/StudentCleanServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="51" column="96" lean-forward="true" selection-start-line="51" selection-start-column="96" selection-end-line="51" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/student_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/service/impl/StudentServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/dao/StudentDao.xml" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/dao/StudentDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/po/Student.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/service/StudentService.java" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/class_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1063">
-          <caret line="280" column="6" selection-start-line="280" selection-start-column="6" selection-end-line="280" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/class_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="114" column="36" lean-forward="true" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/dao/ClassDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/service/ClassService.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/service/impl/ClassServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/po/Class.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/po/Dormitory.java" />
-    <entry file="file://$PROJECT_DIR$/src/springmvc-config.xml" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.xml" />
-    <entry file="file://$PROJECT_DIR$/src/mybatis-config.xml" />
-    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/dao/ClassDao.xml" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/class_Studentlist.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" column="41" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/controller/StudentController.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/controller/VisitorController.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/controller/ClassController.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/controller/DormitoryController.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/controller/DormRepairController.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/controller/DormCleanController.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/service/DormitoryService.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/service/impl/DormitoryServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/controller/AdminController.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dormitory.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="106" column="52" selection-start-line="106" selection-start-column="52" selection-end-line="106" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="187">
-            <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>dormitorySystem:war exploded</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Detection</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>dormitorySystem</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>9.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Java EE 6-Java EE 6</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/repair$repair.ic" NAME="repair Coverage Results" MODIFIED="1601888687449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

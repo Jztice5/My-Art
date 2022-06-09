@@ -1,48 +1,69 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hkw
-  Date: 2018/11/2
-  Time: 13:28
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath(); %>
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="/css/usersLogin.css">
-    <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
-    <script src="/js/jquery-1.3.2.min.js"></script>
-    <script src="js/login.js"></script>
-
-    <title>前台首页</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>用户登录</title>
+    <link rel="stylesheet" type="text/css" href="<%=path%>/login/css/login-1.0.css">
+    <script src="<%=path%>/login/js/jquery-1.11.2.min.js"></script>
+    <script src="<%=path%>/login/js/layer.js"></script>
+    <style>
+        #admintips { margin:0 auto; margin-top:13px; text-align:center; font-size:13px; color:#666; border:1px dashed #ddd; padding:4px 15px; display:none; }
+        #findpwd{ cursor:pointer; }
+    </style>
 </head>
 <body>
-
-<div class="header">
-
-</div>
-
-<div class="body">
-    <div class="panel">
-        <div class="top">
-            <p>账户登陆</p>
-        </div>
-
-        <div class="middle">
-            <form action="/login" method="post">
-
-                <span class="erro">${msg}</span>
-                <span class="s1"></span>
-                <span class="s2"></span>
-                <input type="text" name="a_username" value=""  class="iputs"/>
-                <input type="password" name="a_password" value="" class="iputs"/>
-                <input type="submit" value="登陆"/>
-            </form>
+<link rel="stylesheet" type="text/css" href="<%=path%>/login/css/llq.css">
+<script>
+    $(function(){
+        if (!$.support.leadingWhitespace) {
+            $("#browser_ie").show();
+            $(".logo_box").hide();
+        }
+    })
+</script>
+<div class="container" id="container">
+    <div class="form-container sign-in-container">
+        <form method="post" action="<%=path%>/login">
+            <h1>登录</h1>
+            <div class="social-container"> <span>请使用账号密码登录</span> </div>
+            <input name="username" type="text" value="" placeholder="账号">
+            <input name="password" type="password" value="" placeholder="密码">
+            <div style="width: 300px">
+                <span>
+                    <input type="radio" style="width: 20px" name="type" id="inlineRadio1" value="01"> 管理员
+                </span>&nbsp;&nbsp;
+                <span>
+                    <input type="radio" style="width: 20px" name="type" id="inlineRadio2" value="02"> 采购员
+                </span>&nbsp;
+                <span>
+                    <input type="radio" style="width: 20px" name="type" id="inlineRadio3" value="03"> 后勤处
+                </span>&nbsp;
+                <span>
+                    <input type="radio" style="width: 20px" name="type" id="inlineRadio4" value="04">财务处
+                </span>
+            </div>
+            <button class="logindo" type="submit">登 录</button>
+            <a id="findpwd">忘记密码请联系系统管理员</a>
+            <span>${msg}</span>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-right">
+                <h1>欢迎回来<span style="display:none;">ysb_2.3.2</span></h1>
+                <p>疫情物资管理系统</p>
+            </div>
         </div>
     </div>
-</div>
-
-<div class="footer">
-    <span>@Copyright © 2019-2020 版权所有 </span>
 </div>
 </body>
 </html>

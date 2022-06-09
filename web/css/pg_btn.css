@@ -6,7 +6,7 @@
 }
 
 .page-bar{
-    width: 600px;
+    width: 700px;
     height: 30px;
     float: right;
 }
@@ -43,11 +43,11 @@
 #f_auto{
     margin: 0 auto;
     margin-top: 40px;
-    width: 400px;
+    width: 600px;
 }
 #btn_on{
-    width: 260px;
-    margin-left: 45px;
+    width: 62px;
+    margin-left: 111px;
 }
 .f_sp{
     letter-spacing: 16px;
