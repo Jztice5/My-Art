@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mty.dao.TpurchaseDao" >
+
+    <resultMap id="BaseResultMap" type="com.ssm.mty.po.Tpurchase">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="category" jdbcType="VARCHAR" property="category" />
+        <result column="material" jdbcType="VARCHAR" property="material" />
+        <result column="quantity" jdbcType="INTEGER" property="quantity" />
+        <result column="unit_price" jdbcType="VARCHAR" property="unitPrice" />
+        <result column="purse_time" jdbcType="VARCHAR" property="purseTime" />
+        <result column="purse_id" jdbcType="VARCHAR" property="purseId" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        category,
+        material,
+        quantity,
+        unit_price,
+        purse_time,
+        purse_id
+    </sql>
+
+
+  <!--分页查询-->
+  <select id="getTpurchaseList" parameterType="Integer" resultMap="BaseResultMap">
+    select
+    s.id,
+    r.`name` category,
+    material,
+    quantity,
+    unit_price,
+    purse_time,
+    t.username purse_id
+    from t_purchase s,t_user t,t_category r
+    where s.purse_id = t.id and r.`code` = s.category
+      <if test="material!=null and material != ''">
+          and material like "%"#{material}"%"
+      </if>
+      <if test="category!=null and category != ''">
+          and category = #{category}
+      </if>
+    ORDER BY purse_time desc
+    limit #{currentPage},#{pageSize}
+  </select>
+
+
+  <!--查询总数-->
+  <select id="totalCount"  resultType="Integer">
+    select count(id) from t_purchase
+    where 1=1
+      <if test="material!=null and material != ''">
+          and material like "%"#{material}"%"
+      </if>
+      <if test="category!=null and category != ''">
+          and category = #{category}
+      </if>
+  </select>
+
+
+  <!--添加-->
+  <insert id="addTpurchase" parameterType="com.ssm.mty.po.Tpurchase" >
+    insert into t_purchase (
+              id,
+              category,
+              material,
+              quantity,
+              unit_price,
+              purse_time,
+              purse_id
+  )values(
+             #{id},
+             #{category},
+             #{material},
+             #{quantity},
+             #{unitPrice},
+             #{purseTime},
+             #{purseId}
+  )
+  </insert>
+
+
+  <!--根据id删除-->
+  <delete id="deleteTpurchase" parameterType="Integer" >
+        delete from t_purchase where id=#{id}
+  </delete>
+
+
+  <!--根据ID查询-->
+  <select id="findTpurchaseById"  parameterType="Integer" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from t_purchase where id=#{id}
+  </select>
+
+
+  <!--修改-->
+  <update id="updateTpurchase" parameterType="com.ssm.mty.po.Tpurchase">
+    update t_purchase
+    <set>
+      <if test="category != null">
+        category = #{category},
+      </if>
+      <if test="material != null">
+        material = #{material},
+      </if>
+      <if test="quantity != null">
+        quantity = #{quantity},
+      </if>
+      <if test="unitPrice != null">
+        unit_price = #{unitPrice},
+      </if>
+      <if test="purseTime != null">
+        purse_time = #{purseTime},
+      </if>
+      <if test="purseId != null">
+        purse_id = #{purseId},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <!--查询全部-->
+  <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_purchase
+  </select>
+
+    <!--对采购分组统计-->
+    <select id="queryPur" resultType="com.ssm.mty.po.QueryVO">
+        select t.name name,count(*) qua from t_purchase s,t_category t where s.category = t.`code` group by s.category
+    </select>
+
+</mapper>

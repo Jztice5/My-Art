@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mty.dao.TinputDao" >
+
+    <resultMap id="BaseResultMap" type="com.ssm.mty.po.Tinput">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="category" jdbcType="VARCHAR" property="category" />
+        <result column="material" jdbcType="VARCHAR" property="material" />
+        <result column="quantity" jdbcType="INTEGER" property="quantity" />
+        <result column="money" jdbcType="VARCHAR" property="money" />
+        <result column="purse_time" jdbcType="VARCHAR" property="purseTime" />
+        <result column="purse_id" jdbcType="VARCHAR" property="purseId" />
+        <result column="register_time" jdbcType="VARCHAR" property="registerTime" />
+        <result column="register_id" jdbcType="VARCHAR" property="registerId" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        category,
+        material,
+        quantity,
+        money,
+        purse_time,
+        purse_id,
+        register_time,
+        register_id
+    </sql>
+
+
+  <!--分页查询-->
+  <select id="getTinputList" parameterType="Integer" resultMap="BaseResultMap">
+    select
+        s.id,
+        c.name category,
+        material,
+        quantity,
+        money,
+        purse_time,
+        t.username purse_id,
+        register_time,
+        r.username register_id
+    from t_input s,t_user t,t_user r,t_category c
+    where s.purse_id = t.id and s.register_id = r.id and c.`code` = s.category
+      <if test="material!=null and material != ''">
+          and material like "%"#{material}"%"
+      </if>
+      <if test="category!=null and category != ''">
+          and category = #{category}
+      </if>
+    ORDER BY register_time desc
+    limit #{currentPage},#{pageSize}
+  </select>
+
+
+  <!--查询总数-->
+  <select id="totalCount"  resultType="Integer">
+    select count(id) from t_input
+    where 1=1
+      <if test="material!=null and material != ''">
+          and material like "%"#{material}"%"
+      </if>
+      <if test="category!=null and category != ''">
+          and category = #{category}
+      </if>
+  </select>
+
+
+  <!--添加-->
+  <insert id="addTinput" parameterType="com.ssm.mty.po.Tinput">
+    insert into t_input (
+              id,
+              category,
+              material,
+              quantity,
+              money,
+              purse_time,
+              purse_id,
+              register_time,
+              register_id
+  )values(
+             #{id},
+             #{category},
+             #{material},
+             #{quantity},
+             #{money},
+             #{purseTime},
+             #{purseId},
+             #{registerTime},
+             #{registerId}
+  )
+  </insert>
+
+
+  <!--根据id删除-->
+  <delete id="deleteTinput" parameterType="Integer" >
+        delete from t_input where id=#{id}
+  </delete>
+
+
+  <!--根据ID查询-->
+  <select id="findTinputById"  parameterType="Integer" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from t_input where id=#{id}
+  </select>
+
+
+  <!--修改-->
+  <update id="updateTinput" parameterType="com.ssm.mty.po.Tinput">
+    update t_input
+    <set>
+      <if test="category != null">
+        category = #{category},
+      </if>
+      <if test="material != null">
+        material = #{material},
+      </if>
+      <if test="quantity != null">
+        quantity = #{quantity},
+      </if>
+      <if test="money != null">
+        money = #{money},
+      </if>
+      <if test="purseTime != null">
+        purse_time = #{purseTime},
+      </if>
+      <if test="purseId != null">
+        purse_id = #{purseId},
+      </if>
+      <if test="registerTime != null">
+        register_time = #{registerTime},
+      </if>
+      <if test="registerId != null">
+        register_id = #{registerId},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <!--查询全部-->
+  <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_input
+  </select>
+
+    <!--入库数量统计-->
+    <select id="queryStatistic" resultType="com.ssm.mty.po.QueryVO">
+        SELECT
+	    c.NAME name,
+	    sum( quantity ) qua
+        FROM t_input s, t_category c
+        WHERE c.`code` = s.category
+        GROUP BY category
+    </select>
+</mapper>

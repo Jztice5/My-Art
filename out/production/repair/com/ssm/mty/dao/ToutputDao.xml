@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mty.dao.ToutputDao" >
+
+    <resultMap id="BaseResultMap" type="com.ssm.mty.po.Toutput">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="no" jdbcType="VARCHAR" property="no" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="category" jdbcType="VARCHAR" property="category" />
+        <result column="material" jdbcType="VARCHAR" property="material" />
+        <result column="quantity" jdbcType="INTEGER" property="quantity" />
+        <result column="apply_time" jdbcType="VARCHAR" property="applyTime" />
+        <result column="apply_status" jdbcType="VARCHAR" property="applyStatus" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        no,
+        name,
+        category,
+        material,
+        quantity,
+        apply_time,
+        apply_status
+    </sql>
+
+
+  <!--分页查询-->
+  <select id="getToutputList" parameterType="Integer" resultMap="BaseResultMap">
+    SELECT
+	s.id,
+	NO,
+	s.NAME,
+	t.name category,
+	material,
+	quantity,
+	apply_time,
+	apply_status
+    FROM t_output s,t_category t
+    where s.category = t.`code`
+      <if test="material!=null and material != ''">
+          and material like "%"#{material}"%"
+      </if>
+      <if test="category!=null and category != ''">
+          and category = #{category}
+      </if>
+    ORDER BY apply_time desc
+    limit #{currentPage},#{pageSize}
+  </select>
+
+
+  <!--查询总数-->
+  <select id="totalCount"  resultType="Integer">
+    select count(id) from t_output
+    where 1=1
+      <if test="material!=null and material != ''">
+          and material like "%"#{material}"%"
+      </if>
+      <if test="category!=null and category != ''">
+          and category = #{category}
+      </if>
+  </select>
+
+
+  <!--添加-->
+  <insert id="addToutput" parameterType="com.ssm.mty.po.Toutput">
+    insert into t_output (
+              id,
+              no,
+              name,
+              category,
+              material,
+              quantity,
+              apply_time,
+              apply_status
+  )values(
+             #{id},
+             #{no},
+             #{name},
+             #{category},
+             #{material},
+             #{quantity},
+             #{applyTime},
+             #{applyStatus}
+  )
+  </insert>
+
+
+  <!--根据id删除-->
+  <delete id="deleteToutput" parameterType="Integer" >
+        delete from t_output where id=#{id}
+  </delete>
+
+    <!--更改状态-->
+  <update id="closePut" >
+        update t_output set apply_status = #{status} where id=#{id}
+  </update>
+
+  <!--根据ID查询-->
+  <select id="findToutputById"  parameterType="Integer" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from t_output where id=#{id}
+  </select>
+
+
+  <!--修改-->
+  <update id="updateToutput" parameterType="com.ssm.mty.po.Toutput">
+    update t_output
+    <set>
+      <if test="no != null">
+        no = #{no},
+      </if>
+      <if test="name != null">
+        name = #{name},
+      </if>
+      <if test="category != null">
+        category = #{category},
+      </if>
+      <if test="material != null">
+        material = #{material},
+      </if>
+      <if test="quantity != null">
+        quantity = #{quantity},
+      </if>
+      <if test="applyTime != null">
+        apply_time = #{applyTime},
+      </if>
+      <if test="applyStatus != null">
+        apply_status = #{applyStatus},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <!--查询全部-->
+  <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_output
+  </select>
+
+</mapper>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mty.dao.TaccountDao" >
+
+    <resultMap id="BaseResultMap" type="com.ssm.mty.po.Taccount">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="category" jdbcType="VARCHAR" property="category" />
+        <result column="material" jdbcType="VARCHAR" property="material" />
+        <result column="quantity" jdbcType="INTEGER" property="quantity" />
+        <result column="money" jdbcType="VARCHAR" property="money" />
+        <result column="purse_id" jdbcType="VARCHAR" property="purseId" />
+        <result column="apply_id" jdbcType="VARCHAR" property="applyId" />
+        <result column="status" jdbcType="VARCHAR" property="status" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        category,
+        material,
+        quantity,
+        money,
+        purse_id,
+        apply_id,
+        status
+    </sql>
+
+
+  <!--分页查询-->
+  <select id="getTaccountList" parameterType="Integer" resultMap="BaseResultMap">
+    SELECT
+        s.id,
+        t.name category,
+        material,
+        quantity,
+        money,
+        r.username purse_id,
+        u.username apply_id,
+        status
+    FROM
+        t_account s ,
+        t_category t,
+        t_user r,
+        t_user u
+    where
+    s.category = t.`code`
+    and s.purse_id = r.id
+    and s.apply_id = u.id
+      <if test="material!=null and material != ''">
+          and material like "%"#{material}"%"
+      </if>
+      <if test="category!=null and category != ''">
+          and category = #{category}
+      </if>
+    ORDER BY category desc
+    limit #{currentPage},#{pageSize}
+  </select>
+
+
+  <!--查询总数-->
+  <select id="totalCount"  resultType="Integer">
+    select count(id) from t_account
+    where 1=1
+      <if test="material!=null and material != ''">
+          and material like "%"#{material}"%"
+      </if>
+      <if test="category!=null and category != ''">
+          and category = #{category}
+      </if>
+  </select>
+
+    <!--分页查询-->
+    <select id="getTaccountList1" parameterType="Integer" resultMap="BaseResultMap">
+        SELECT
+        s.id,
+        t.name category,
+        material,
+        quantity,
+        money,
+        r.username purse_id,
+        u.username apply_id,
+        status
+        FROM
+        t_account s ,t_category t,t_user r,t_user u
+        where s.category = t.`code` and s.purse_id = r.id and s.apply_id = u.id
+        <if test="material!=null and material != ''">
+            and material like "%"#{material}"%"
+        </if>
+        <if test="category!=null and category != ''">
+            and category = #{category}
+        </if>
+        <if test="id!=null and id != ''">
+            and purse_id = #{id}
+        </if>
+        ORDER BY category desc
+        limit #{currentPage},#{pageSize}
+    </select>
+
+
+    <!--查询总数-->
+    <select id="totalCount1"  resultType="Integer">
+        select count(id) from t_account
+        where 1=1
+        <if test="material!=null and material != ''">
+            and material like "%"#{material}"%"
+        </if>
+        <if test="category!=null and category != ''">
+            and category = #{category}
+        </if>
+        <if test="id!=null and id != ''">
+            and purse_id = #{id}
+        </if>
+    </select>
+
+  <!--添加-->
+  <insert id="addTaccount" parameterType="com.ssm.mty.po.Taccount" >
+    insert into t_account (
+              id,
+              category,
+              material,
+              quantity,
+              money,
+              purse_id,
+              apply_id,
+              status
+  )values(
+             #{id},
+             #{category},
+             #{material},
+             #{quantity},
+             #{money},
+             #{purseId},
+             #{applyId},
+             #{status}
+  )
+  </insert>
+
+
+  <!--根据id删除-->
+  <delete id="deleteTaccount" parameterType="Integer" >
+        delete from t_account where id=#{id}
+  </delete>
+
+    <!--更改状态-->
+  <update id="accountPut" >
+        update t_account set status = #{status} where id=#{id}
+  </update>
+
+  <!--根据ID查询-->
+  <select id="findTaccountById"  parameterType="Integer" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from t_account where id=#{id}
+  </select>
+
+
+  <!--修改-->
+  <update id="updateTaccount" parameterType="com.ssm.mty.po.Taccount">
+    update t_account
+    <set>
+      <if test="category != null">
+        category = #{category},
+      </if>
+      <if test="material != null">
+        material = #{material},
+      </if>
+      <if test="quantity != null">
+        quantity = #{quantity},
+      </if>
+      <if test="money != null">
+        money = #{money},
+      </if>
+      <if test="purseId != null">
+        purse_id = #{purseId},
+      </if>
+      <if test="applyId != null">
+        apply_id = #{applyId},
+      </if>
+      <if test="status != null">
+        status = #{status},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <!--查询全部-->
+  <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_account
+  </select>
+
+</mapper>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mty.dao.TuserDao" >
+
+    <resultMap id="BaseResultMap" type="com.ssm.mty.po.Tuser">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="type" jdbcType="VARCHAR" property="type" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="sex" jdbcType="VARCHAR" property="sex" />
+        <result column="phone" jdbcType="VARCHAR" property="phone" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        type,
+        username,
+        password,
+        sex,
+        phone
+    </sql>
+
+
+  <!--分页查询-->
+  <select id="getTuserList" parameterType="Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_user
+    where 1=1
+    <if test="username!=null and  username != ''">
+        and username like "%"#{username}"%"
+    </if>
+    <if test="type!=null and type != ''">
+      and type = #{type}
+    </if>
+    ORDER BY id asc
+    limit #{currentPage},#{pageSize}
+  </select>
+
+
+  <!--查询总数-->
+  <select id="totalCount"  resultType="Integer">
+    select count(id) from t_user
+    where 1 = 1
+      <if test="username!=null and username != ''">
+          and username like "%"#{username}"%"
+      </if>
+      <if test="type!=null and type != ''">
+          and type = #{type}
+      </if>
+  </select>
+
+
+  <!--添加-->
+  <insert id="addTuser" parameterType="com.ssm.mty.po.Tuser" >
+    insert into t_user (
+              id,
+              type,
+              username,
+              password,
+              sex,
+              phone
+  )values(
+             #{id},
+             #{type},
+             #{username},
+             #{password},
+             #{sex},
+             #{phone}
+  )
+  </insert>
+
+
+  <!--根据id删除-->
+  <delete id="deleteTuser" parameterType="Integer" >
+        delete from t_user where id=#{id}
+  </delete>
+
+
+  <!--根据ID查询-->
+  <select id="findTuserById"  parameterType="Integer" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from t_user where id=#{id}
+  </select>
+
+
+  <!--修改-->
+  <update id="updateTuser" parameterType="com.ssm.mty.po.Tuser">
+    update t_user
+    <set>
+      <if test="type != null">
+        type = #{type},
+      </if>
+      <if test="username != null">
+        username = #{username},
+      </if>
+      <if test="password != null">
+        password = #{password},
+      </if>
+      <if test="sex != null">
+        sex = #{sex},
+      </if>
+      <if test="phone != null">
+        phone = #{phone},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <!--查询全部-->
+  <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_user
+  </select>
+
+
+    <!--根据用户名、密码、类型查询-->
+    <select id="findUser"  parameterType="string" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from t_user
+        where username = #{username} and password = #{password} and type = #{type}
+    </select>
+
+    <!--查询全部-->
+    <select id="getUserByType" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_user
+        where type = #{type}
+    </select>
+</mapper>
